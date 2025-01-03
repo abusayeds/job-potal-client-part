@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { Checkbox } from "../ui/checkbox";
 
@@ -25,7 +26,7 @@ const TagSelectInput = ({
   useEffect(() => {
     setReviewData((c: any) => ({ ...c, [fieldName]: tags }));
   }, [tags]);
-  console.log(tags);
+ 
   return (
     <div className="space-y-8">
       <p className="text-base lg:text-lg text-black">{label}</p>

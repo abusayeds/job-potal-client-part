@@ -19,7 +19,8 @@ async function getStudios(studioId : string) {
     const response = await fetchGetApi(`studio/get-studio-reviews/${studioId}`);
     return response?.data || [];
   } catch (error) {
-    console.error("Error fetching studio reviews:", error);
+       console.log(error)
+    // console.error("Error fetching studio reviews:", error);
     return [];
   }
 }

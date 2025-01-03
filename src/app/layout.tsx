@@ -38,6 +38,7 @@ export default function RootLayout({
       <body
         className={`${questrial.className} ${syne.variable} ${questrial.variable} ${lulo.variable}`}
       >
+        
         < ContextProviders>
           {children}
         </ContextProviders>

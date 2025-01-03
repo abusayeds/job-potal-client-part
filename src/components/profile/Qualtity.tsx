@@ -19,7 +19,7 @@ const Qualtity = ({item} : any) => {
         if (typeof currentItem.value === "number") {
           valueToAdd = currentItem.value;
         } else if (typeof currentItem.value === "boolean") {
-          valueToAdd = currentItem.value ? 1 : 0; // Convert boolean to 1 or 0
+          valueToAdd = currentItem.value ? 1 : 0; 
         }
         
         return accumulator + valueToAdd / 10;

@@ -44,13 +44,13 @@ type TAuthFormProps = {
     redirect?: string;
     des: string;
     back?: boolean;
-  };
+  } | null;
   closeModal: () => void
 };
 
 export function SignIn({ modalTitleData, setModalTitleData, closeModal }: TAuthFormProps) {
   const { setReportModelIsOpen,
-    getUser } = useMyContext()
+    getUser  } = useMyContext()
   const router = useRouter()
   const [error, setError] = useState<string | null>(null);
   const form = useForm<z.infer<typeof formSchema>>({
@@ -62,12 +62,14 @@ export function SignIn({ modalTitleData, setModalTitleData, closeModal }: TAuthF
   });
   async function onSubmit(values: z.infer<typeof formSchema>) {
 
+    
     setError(null);
     try {
       const response = await fetchPostApi(
         "user/login",
         values
       );
+    
       if (response?.data?.token) {
         Cookies.set("authToken", response?.data?.token, {
           expires: 7,

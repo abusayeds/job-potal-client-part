@@ -42,8 +42,10 @@ export async function fetchPostApi(
     const response = await fetch(url.toString(), config);
     return await response.json();
   } catch (error) {
-    console.error("Fetch POST error:", error);
-    throw error;
+    console.log(error);
+    
+    // console.error("Fetch POST error:", error);
+    // throw error;
   }
 }
 export async function fetchGetApi(
@@ -74,7 +76,8 @@ export async function fetchGetApi(
     const response = await fetch(url.toString(), config);
     return await response.json();
   } catch (error) {
-    console.error("Fetch GET error:", error);
+      console.log(error)
+    // console.error("Fetch GET error:", error);
     throw error;
   }
 }

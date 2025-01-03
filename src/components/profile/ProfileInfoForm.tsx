@@ -18,6 +18,7 @@ import { Pencil } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { fetchGetApi, fetchPostApi } from "@/lib/fetchApi";
 import Swal from "sweetalert2";
+import { useMyContext } from "../MyContext";
 
 const formSchema = z.object({
   firstName: z.string().min(1, {
@@ -31,6 +32,7 @@ const formSchema = z.object({
 
 
 export function ProfileInfoForm() {
+  const {refetchUser} = useMyContext()
   const [userInfo, setUser] = useState<any>()
   const [isEdit, setIsEdit] = React.useState(false);
   const form = useForm<z.infer<typeof formSchema>>({
@@ -42,10 +44,11 @@ export function ProfileInfoForm() {
     if (response?.success === true) {
       await Swal.fire({
         icon: "success",
-        title: "Report Submitted",
+        title: "Successfully Submitted",
         text: "profile updated successfully !",
         confirmButtonText: "OK",
       });
+      refetchUser()
     } else {
       await Swal.fire({
         icon: "error",

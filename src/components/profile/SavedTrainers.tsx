@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { fetchGetApi } from "@/lib/fetchApi";
 import { getDecodedToken } from "@/utils/decodeToken";
 import { BookmarkCheck } from "lucide-react";

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 // "use client";
 // import React from "react";
 // import { zodResolver } from "@hookform/resolvers/zod";
@@ -712,7 +713,6 @@ const Page = () => {
                         <Select
                           onValueChange={(value) => {
                             field.onChange(value);
-                            // Optionally, you can perform actions based on training type
                           }}
                           value={field.value}
                         >

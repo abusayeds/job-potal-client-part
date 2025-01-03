@@ -53,7 +53,7 @@ export function Forgot({ setModalTitleData, setIsAuthOpen, setAuthTitleData }: a
           sameSite: "Strict",
           path: "/",
         })
-        console.log(response?.data?.token);
+      
         setModalTitleData(authPayloads["Verification Code"])
       
     } else {

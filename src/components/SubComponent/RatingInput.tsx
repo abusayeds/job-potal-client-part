@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { cn } from "@/lib/utils";
 import { ratingColorPicker } from "@/utils";
 import React, { useEffect, useState } from "react";

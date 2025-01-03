@@ -2,9 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import Container from "@/components/Container";
-
 import Link from "next/link";
-
 import award from "@/assets/svgs/award.svg";
 import check from "@/assets/svgs/check.svg";
 import danger from "@/assets/svgs/danger.svg";
@@ -17,14 +15,13 @@ import grace from "@/assets/svgs/grace.svg";
 import availability from "@/assets/svgs/availity.svg";
 import RatingsList from "@/components/Studios/RatingsList";
 import { fetchGetApi } from "@/lib/fetchApi";
-
 import StudioRatingButton from "@/components/Studios/StudioRatingButton";
+
 async function getSinglestudio(studioId: string,) {
   return fetchGetApi(`studio/get-studio/${studioId}`);
 }
-const Page = async ({ params }: { params: { detailsId: string } }) => {
+const page = async ({ params }: any) => {
   const response = await getSinglestudio(params.detailsId);
-  console.log(response);
   const avg = response?.data?.averages
   const studioInfo = response?.data?.result
   const detailsDatas = [
@@ -135,4 +132,4 @@ const Page = async ({ params }: { params: { detailsId: string } }) => {
   );
 };
 
-export default Page;
+export default page;

@@ -11,6 +11,7 @@ const Header = () => {
       <WebsiteBranding />
       <HeaderSearchForm />
       <div className="border-t-2 border-b-2 border-primary py-4 lg:py-6">
+        
         <div className="max-h-[55vh] w-full overflow-hidden no-scrollbar scroll-smooth">
           <Image
             alt="header-image"

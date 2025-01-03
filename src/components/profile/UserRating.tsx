@@ -7,7 +7,6 @@ import avaibility from "@/assets/svgs/availity.svg";
 import earth from "@/assets/svgs/earth.svg";
 import location from "@/assets/svgs/location.svg";
 import parking from "@/assets/svgs/parking.svg";
-import avail from "@/assets/svgs/avail.svg";
 import clean from "@/assets/svgs/clean.svg";
 import equip from "@/assets/svgs/equip.svg";
 import grace from "@/assets/svgs/grace.svg";

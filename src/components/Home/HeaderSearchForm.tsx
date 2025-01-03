@@ -10,7 +10,7 @@ const HeaderSearchForm = () => {
   const router = useRouter();
   const [inputValue, setInputValue] = useState("");
   const [toggleTrainer, setToggleTrainer] = useState(false);
-  const [error, setError] = useState(""); // State for error message
+  const [error, setError] = useState(""); 
 
   const handleEnterKey = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
@@ -38,11 +38,9 @@ const HeaderSearchForm = () => {
       icon: BicepsFlexed,
     },
   ];
-
- 
-
   return (
     <div className="max-w-[90%] md:max-w-lg mx-auto">
+   
       <div className="relative">
         <Input
           onKeyDown={handleEnterKey}

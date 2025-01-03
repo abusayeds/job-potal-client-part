@@ -64,7 +64,7 @@ export function SignUp({setIsAuthOpen, setAuthTitleData } : any ) {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     const response = await fetchPostApi("user/signup", values);
-    console.log(response);
+
     if (response?.success === true) {
       await Swal.fire({
         icon: "success",
