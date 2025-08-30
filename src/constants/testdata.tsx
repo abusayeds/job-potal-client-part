@@ -1,0 +1,608 @@
+// export const jobDatas = [
+//   {
+//     id: "1JKJFKJDS",
+//     company: "BRB Cables Industry Ltd.",
+//     position: "Deputy General Manager (Store/Distribution)",
+//     location: "Kushtia",
+//     vacancy: null,
+//     experience: "At least 10 years",
+//     ageLimit: "35 to 45 years",
+//     education: [
+//       "MBA (Master of Business Administration)",
+//       "MBS (Master of Business Studies)",
+//       "MCom (Master of Commerce)",
+//     ],
+//     employmentStatus: "Full Time",
+//     applicationDeadline: "2025-06-03",
+//     publishedDate: "2025-05-26",
+//     workPlace: "Head Office at Kushtia",
+//     responsibilities: [
+//       "Develop Store/Distribution strategy",
+//       "Coordinate with Production and Sales",
+//       "Maintain inventory systems",
+//       "Lead team operations",
+//     ],
+//     additionalRequirements: [
+//       "Experience in manufacturing",
+//       "ERP knowledge",
+//       "Strong leadership skills",
+//     ],
+//     compensationBenefits: [
+//       "Health Insurance",
+//       "Retirement Plan",
+//       "Paid Time Off",
+//       "Flexible Hours",
+//       "Remote Work",
+//       "Training & Development",
+//       "Bonuses",
+//       "Parental Leave",
+//     ],
+//     applyProcedure: {
+//       email: "brbcables@gmail.com",
+//       hardCopy:
+//         "The Managing Director, BRB Cable Industries Ltd, BSCIC Industrial Estate, Kushtia",
+//     },
+//     notesBeforeApply: "Send CV, certificates, 2 photos, and expected salary",
+//   },
+//   {
+//     id: "2JKJFKJDS",
+//     company: "Square Pharmaceuticals Ltd.",
+//     position: "Medical Promotion Officer",
+//     location: "Nationwide",
+//     vacancy: 50,
+//     experience: "Freshers encouraged",
+//     ageLimit: "Up to 30 years",
+//     education: ["Graduate in any discipline"],
+//     employmentStatus: "Full Time",
+//     applicationDeadline: "2025-06-15",
+//     publishedDate: "2025-05-20",
+//     workPlace: "Field Work",
+//     responsibilities: [
+//       "Visit doctors and promote products",
+//       "Achieve monthly sales targets",
+//       "Prepare daily reports",
+//     ],
+//     additionalRequirements: [
+//       "Good communication",
+//       "Willing to travel",
+//       "Strong interpersonal skills",
+//     ],
+//     compensationBenefits: [
+//       "Health Insurance",
+//       "Retirement Plan",
+//       "Paid Time Off",
+//       "Flexible Hours",
+//       "Remote Work",
+//       "Training & Development",
+//       "Bonuses",
+//       "Parental Leave",
+//     ],
+//     applyProcedure: {
+//       email: "hr@squarepharma.com",
+//       hardCopy: null,
+//     },
+//     notesBeforeApply: "Walk-in interview dates available on website",
+//   },
+//   {
+//     id: "3JKJFKJDS",
+//     company: "Pathao Ltd.",
+//     position: "Frontend Developer",
+//     location: "Dhaka",
+//     vacancy: 2,
+//     experience: "3+ years",
+//     ageLimit: "No age limit",
+//     education: ["BSc in CSE or related"],
+//     employmentStatus: "Full Time",
+//     applicationDeadline: "2025-06-30",
+//     publishedDate: "2025-05-24",
+//     workPlace: "Head Office, Dhaka",
+//     responsibilities: [
+//       "Develop UI with React.js",
+//       "Integrate APIs",
+//       "Maintain code standards",
+//     ],
+//     additionalRequirements: [
+//       "Experience with TypeScript",
+//       "Team collaboration",
+//       "Git workflow knowledge",
+//     ],
+//     compensationBenefits: [
+//       "Health Insurance",
+//       "Retirement Plan",
+//       "Paid Time Off",
+//       "Flexible Hours",
+//       "Remote Work",
+//       "Training & Development",
+//       "Bonuses",
+//       "Parental Leave",
+//     ],
+//     applyProcedure: {
+//       email: "techjobs@pathao.com",
+//       hardCopy: null,
+//     },
+//     notesBeforeApply: "Attach GitHub or portfolio",
+//   },
+//   {
+//     id: "4JKJFKJDS",
+//     company: "bKash Limited",
+//     position: "Marketing Executive",
+//     location: "Dhaka",
+//     vacancy: 5,
+//     experience: "1-3 years",
+//     ageLimit: "22 to 30 years",
+//     education: ["BBA/MBA in Marketing"],
+//     employmentStatus: "Full Time",
+//     applicationDeadline: "2025-06-05",
+//     publishedDate: "2025-05-23",
+//     workPlace: "Corporate HQ",
+//     responsibilities: [
+//       "Execute marketing campaigns",
+//       "Digital and offline promotion",
+//       "Coordinate with agencies",
+//     ],
+//     additionalRequirements: [
+//       "Fluent in English and Bangla",
+//       "Creative thinking",
+//       "Event management experience is a plus",
+//     ],
+//     compensationBenefits: [
+//       "Health Insurance",
+//       "Retirement Plan",
+//       "Paid Time Off",
+//       "Flexible Hours",
+//       "Remote Work",
+//       "Training & Development",
+//       "Bonuses",
+//       "Parental Leave",
+//     ],
+//     applyProcedure: {
+//       email: "careers@bkash.com",
+//       hardCopy: null,
+//     },
+//     notesBeforeApply: "Subject should be ‘Marketing Executive Application’",
+//   },
+//   {
+//     id: "5JKJFKJDS",
+//     company: "Walton Hi-Tech Industries Ltd.",
+//     position: "Mechanical Engineer",
+//     location: "Gazipur",
+//     vacancy: 3,
+//     experience: "2+ years",
+//     ageLimit: "Up to 35 years",
+//     education: ["BSc in Mechanical Engineering"],
+//     employmentStatus: "Full Time",
+//     applicationDeadline: "2025-06-10",
+//     publishedDate: "2025-05-21",
+//     workPlace: "Factory Premises",
+//     responsibilities: [
+//       "Machine setup & maintenance",
+//       "Production efficiency monitoring",
+//       "Prepare technical reports",
+//     ],
+//     additionalRequirements: [
+//       "AutoCAD proficiency",
+//       "Factory environment adaptability",
+//     ],
+//     compensationBenefits: [
+//       "Health Insurance",
+//       "Retirement Plan",
+//       "Paid Time Off",
+//       "Flexible Hours",
+//       "Remote Work",
+//       "Training & Development",
+//       "Bonuses",
+//       "Parental Leave",
+//     ],
+//     applyProcedure: {
+//       email: "recruit@waltonbd.com",
+//       hardCopy: null,
+//     },
+//     notesBeforeApply: "Only shortlisted will be contacted",
+//   },
+//   {
+//     id: "6JKJFKJDS",
+//     company: "Grameenphone Ltd.",
+//     position: "Customer Experience Officer",
+//     location: "Sylhet, Chattogram, Rajshahi",
+//     vacancy: 10,
+//     experience: "Entry-level",
+//     ageLimit: "20 to 28 years",
+//     education: ["Bachelor's Degree (any discipline)"],
+//     employmentStatus: "Full Time",
+//     applicationDeadline: "2025-06-12",
+//     publishedDate: "2025-05-22",
+//     workPlace: "Retail Experience Centers",
+//     responsibilities: [
+//       "Serve walk-in customers",
+//       "Handle queries & complaints",
+//       "Promote digital products",
+//     ],
+//     additionalRequirements: [
+//       "Customer-centric mindset",
+//       "Flexible shifts",
+//       "Tech-savvy",
+//     ],
+//     compensationBenefits: [
+//       "Health Insurance",
+//       "Retirement Plan",
+//       "Paid Time Off",
+//       "Flexible Hours",
+//       "Remote Work",
+//       "Training & Development",
+//       "Bonuses",
+//       "Parental Leave",
+//     ],
+//     applyProcedure: {
+//       email: "retail@gp.com.bd",
+//       hardCopy: null,
+//     },
+//     notesBeforeApply: "Mention preferred city in subject",
+//   },
+//   {
+//     id: "7JKJFKJDS",
+//     company: "BRAC Bank Ltd.",
+//     position: "Branch Relationship Manager",
+//     location: "Multiple districts",
+//     vacancy: 12,
+//     experience: "Minimum 3 years in banking",
+//     ageLimit: "25 to 40 years",
+//     education: ["BBA/MBA in Finance/Marketing"],
+//     employmentStatus: "Full Time",
+//     applicationDeadline: "2025-06-18",
+//     publishedDate: "2025-05-19",
+//     workPlace: "Bank Branch Offices",
+//     responsibilities: [
+//       "Client acquisition and relationship",
+//       "Meet branch sales targets",
+//       "Cross-sell bank services",
+//     ],
+//     additionalRequirements: [
+//       "Field visit willingness",
+//       "Banking software knowledge",
+//     ],
+//     compensationBenefits: [
+//       "Health Insurance",
+//       "Retirement Plan",
+//       "Paid Time Off",
+//       "Flexible Hours",
+//       "Remote Work",
+//       "Training & Development",
+//       "Bonuses",
+//       "Parental Leave",
+//     ],
+//     applyProcedure: {
+//       email: "career@bracbank.com",
+//       hardCopy: null,
+//     },
+//     notesBeforeApply: "Apply via BRAC Bank careers portal",
+//   },
+//   {
+//     id: "8JKJFKJDS",
+//     company: "Tech Care IT",
+//     position: "Laravel Developer",
+//     location: "Remote",
+//     vacancy: 1,
+//     experience: "2+ years",
+//     ageLimit: "No restriction",
+//     education: ["BSc in CSE or equivalent"],
+//     employmentStatus: "Remote / Contract",
+//     applicationDeadline: "2025-06-20",
+//     publishedDate: "2025-05-27",
+//     workPlace: "Remote",
+//     responsibilities: [
+//       "Build APIs with Laravel",
+//       "Integrate Vue or React frontends",
+//       "Manage MySQL databases",
+//     ],
+//     additionalRequirements: [
+//       "Experience with Laravel 10+",
+//       "Self-motivated and deadline-driven",
+//     ],
+//     compensationBenefits: [
+//       "Health Insurance",
+//       "Retirement Plan",
+//       "Paid Time Off",
+//       "Flexible Hours",
+//       "Remote Work",
+//       "Training & Development",
+//       "Bonuses",
+//       "Parental Leave",
+//     ],
+//     applyProcedure: {
+//       email: "jobs@techcareit.com",
+//       hardCopy: null,
+//     },
+//     notesBeforeApply: "Attach portfolio or GitHub with your CV",
+//   },
+// ];
+
+// export const candidates = [
+//   {
+//     id: 1,
+//     name: "Dianne Russell",
+//     position: "Marketing Officer",
+//     location: "New York",
+//     experience: "3 Years",
+//     profileImage: "path/to/dianne-russell.jpg",
+//     profileLink: "/profile/dianne-russell",
+//   },
+//   {
+//     id: 2,
+//     name: "Robert Fox",
+//     position: "Senior UI/UX Designer",
+//     location: "San Francisco",
+//     experience: "5 Years",
+//     profileImage: "path/to/robert-fox.jpg",
+//     profileLink: "/profile/robert-fox",
+//   },
+//   {
+//     id: 3,
+//     name: "Kristin Watson",
+//     position: "Frontend Developer",
+//     location: "Austin",
+//     experience: "4 Years",
+//     profileImage: "path/to/kristin-watson.jpg",
+//     profileLink: "/profile/kristin-watson",
+//   },
+//   {
+//     id: 4,
+//     name: "Courtney Henry",
+//     position: "Data Analyst",
+//     location: "Chicago",
+//     experience: "2 Years",
+//     profileImage: "path/to/courtney-henry.jpg",
+//     profileLink: "/profile/courtney-henry",
+//   },
+//   {
+//     id: 5,
+//     name: "Cameron Williamson",
+//     position: "Product Manager",
+//     location: "Seattle",
+//     experience: "6 Years",
+//     profileImage: "path/to/cameron-williamson.jpg",
+//     profileLink: "/profile/cameron-williamson",
+//   },
+//   {
+//     id: 6,
+//     name: "Arlene McCoy",
+//     position: "HR Specialist",
+//     location: "Miami",
+//     experience: "4 Years",
+//     profileImage: "path/to/arlene-mccoy.jpg",
+//     profileLink: "/profile/arlene-mccoy",
+//   },
+//   {
+//     id: 7,
+//     name: "Ronald Richards",
+//     position: "DevOps Engineer",
+//     location: "Denver",
+//     experience: "5 Years",
+//     profileImage: "path/to/ronald-richards.jpg",
+//     profileLink: "/profile/ronald-richards",
+//   },
+//   {
+//     id: 8,
+//     name: "Kathryn Murphy",
+//     position: "Content Writer",
+//     location: "Los Angeles",
+//     experience: "3 Years",
+//     profileImage: "path/to/kathryn-murphy.jpg",
+//     profileLink: "/profile/kathryn-murphy",
+//   },
+//   {
+//     id: 9,
+//     name: "Savannah Nguyen",
+//     position: "QA Engineer",
+//     location: "Boston",
+//     experience: "2 Years",
+//     profileImage: "path/to/savannah-nguyen.jpg",
+//     profileLink: "/profile/savannah-nguyen",
+//   },
+//   {
+//     id: 10,
+//     name: "Guy Hawkins",
+//     position: "Full Stack Developer",
+//     location: "Houston",
+//     experience: "6 Years",
+//     profileImage: "path/to/guy-hawkins.jpg",
+//     profileLink: "/profile/guy-hawkins",
+//   },
+// ];
+
+// interface PricingPlan {
+//   id: string;
+//   name: string;
+//   price: number;
+//   discount?: number;
+//   period: string;
+//   badge?: string;
+//   buttonText: string;
+//   buttonVariant: "primary" | "secondary";
+//   description?: string;
+//   features: {
+//     text: string;
+//     included: boolean;
+//   }[];
+// }
+
+// export const pricingPlans: PricingPlan[] = [
+//   {
+//     id: "basic",
+//     name: "Basic Plan",
+//     price: 199,
+//     period: "60 Days",
+//     buttonText: "Order Now",
+//     buttonVariant: "primary",
+//     features: [
+//       {
+//         text: "Unlimited text to list all you need in your ad",
+//         included: true,
+//       },
+//       {
+//         text: "Add logo and images to your ad",
+//         included: true,
+//       },
+//       {
+//         text: "Average posting viewed 1000+ times",
+//         included: true,
+//       },
+//       {
+//         text: "Select multiple categories for max exposure",
+//         included: true,
+//       },
+//       {
+//         text: "Schedule a publish and expiration date for each job posting",
+//         included: false,
+//       },
+//       {
+//         text: "Unlimited job postings for a year for one annual fee",
+//         included: false,
+//       },
+//       {
+//         text: "Fill Multiple Open Positions with an Unlimited Job Posting Package",
+//         included: false,
+//       },
+//       {
+//         text: "Continuous posting to ensure you reach the best talent.",
+//         included: false,
+//       },
+//       {
+//         text: "Add multiple users to your account, maximum three.",
+//         included: false,
+//       },
+//       {
+//         text: "70% of organizations choose this option.",
+//         included: false,
+//       },
+//       {
+//         text: "The most cost-effective option for mid-to-large organizations.",
+//         included: false,
+//       },
+//       {
+//         text: "Post your job until you find the right applicants — no time limits.",
+//         included: false,
+//       },
+//     ],
+//   },
+//   {
+//     id: "standard",
+//     name: "Standard Plan",
+//     price: 600,
+//     discount: 55,
+//     period: "2 Month",
+//     badge: "Save $395",
+//     buttonText: "Order Now",
+//     buttonVariant: "primary",
+//     features: [
+//       {
+//         text: "Unlimited text to list all you need in your ad",
+//         included: true,
+//       },
+//       {
+//         text: "Add logo and images to your ad",
+//         included: true,
+//       },
+//       {
+//         text: "Average posting viewed 1000+ times",
+//         included: true,
+//       },
+//       {
+//         text: "Select multiple categories for max exposure",
+//         included: true,
+//       },
+//       {
+//         text: "Schedule a publish and expiration date for each job posting",
+//         included: false,
+//       },
+//       {
+//         text: "Unlimited job postings for a year for one annual fee",
+//         included: false,
+//       },
+//       {
+//         text: "Fill Multiple Open Positions with an Unlimited Job Posting Package",
+//         included: false,
+//       },
+//       {
+//         text: "Continuous posting to ensure you reach the best talent.",
+//         included: false,
+//       },
+//       {
+//         text: "Add multiple users to your account, maximum three.",
+//         included: false,
+//       },
+//       {
+//         text: "70% of organizations choose this option.",
+//         included: false,
+//       },
+//       {
+//         text: "The most cost-effective option for mid-to-large organizations.",
+//         included: false,
+//       },
+//       {
+//         text: "Post your job until you find the right applicants — no time limits.",
+//         included: false,
+//       },
+//     ],
+//   },
+//   {
+//     id: "unlimited",
+//     name: "Unlimited Plan",
+//     price: 700,
+//     period: "1 Year",
+//     description: "Price Varies based on Organization Size / Years",
+//     buttonText: "Subscribe Now",
+//     buttonVariant: "primary",
+//     features: [
+//       {
+//         text: "Unlimited text to list all you need in your ad",
+//         included: true,
+//       },
+//       {
+//         text: "Add logo and images to your ad",
+//         included: true,
+//       },
+//       {
+//         text: "Average posting viewed 1000+ times",
+//         included: true,
+//       },
+//       {
+//         text: "Select multiple categories for max exposure",
+//         included: true,
+//       },
+//       {
+//         text: "Schedule a publish and expiration date for each job posting",
+//         included: true,
+//       },
+//       {
+//         text: "Unlimited job postings for a year for one annual fee",
+//         included: true,
+//       },
+//       {
+//         text: "Fill Multiple Open Positions with an Unlimited Job Posting Package",
+//         included: true,
+//       },
+//       {
+//         text: "Continuous posting to ensure you reach the best talent.",
+//         included: true,
+//       },
+//       {
+//         text: "Add multiple users to your account, maximum three.",
+//         included: true,
+//       },
+//       {
+//         text: "70% of organizations choose this option.",
+//         included: true,
+//       },
+//       {
+//         text: "The most cost-effective option for mid-to-large organizations.",
+//         included: true,
+//       },
+//       {
+//         text: "Post your job until you find the right applicants — no time limits.",
+//         included: false,
+//       },
+//     ],
+//   },
+// ];
+
+// export default pricingPlans;
