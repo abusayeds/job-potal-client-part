@@ -8,7 +8,7 @@ import { store } from "@/redux/store";
 import { ConfigProvider } from "antd";
 import { ReactNode, useEffect } from "react";
 import { Provider } from "react-redux";
-// import { PersistGate } from "redux-persist/integration/react";
+
 
 interface ProvidersProps {
   children: ReactNode;
@@ -32,23 +32,23 @@ const Providers = ({ children }: ProvidersProps) => {
 export default Providers;
 
 const AuthProvider = ({ children }: ProvidersProps) => {
-    const dispatch = useAppDispatch();
-    const { data, isLoading } = useGetProfileQuery(undefined); 
-    // const { data: favoriteData } = useMyFavoriteQuery(undefined); 
-    // console.log(favoriteData?.data?.saveData)
-    useEffect(() => {
-      dispatch(
-        setUser({
-          user: data?.data,
-        })
-      );
-    }, [data]);
-    if (isLoading) {
-      return (
-        <div className="min-h-screen h-full flex flex-col justify-center items-center gap-2">
-          <p className="animate-pulse text-sm md:text-xl uppercase font-medium">Welcome</p>
-        </div>
-      );
-    }
+  const dispatch = useAppDispatch();
+  const { data, isLoading } = useGetProfileQuery(undefined);
+  // const { data: favoriteData } = useMyFavoriteQuery(undefined); 
+  // console.log(favoriteData?.data?.saveData)
+  useEffect(() => {
+    dispatch(
+      setUser({
+        user: data?.data,
+      })
+    );
+  }, [data]);
+  if (isLoading) {
+    return (
+      <div className="min-h-screen h-full flex flex-col justify-center items-center gap-2">
+        <p className="animate-pulse text-sm md:text-xl uppercase font-medium">Welcome</p>
+      </div>
+    );
+  }
   return children;
 };
