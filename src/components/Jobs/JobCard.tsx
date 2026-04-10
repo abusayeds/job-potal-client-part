@@ -46,12 +46,7 @@ const JobCard = ({
           </h3>
         </div>
         <div className="lg:ml-4 flex-shrink-0 w-20 xl:w-24 order-first lg:order-last drop-shadow-xs">
-          <Image
-            src={imageUrl + jobData?.logo}
-            alt="logo"
-            width={500}
-            height={500}
-          />
+          <Image src={jobData?.logo} alt="logo" width={500} height={500} />
         </div>
       </div>
 
