@@ -45,7 +45,7 @@ const page = async (props: TPageProps) => {
               year: "numeric",
               month: "short",
               day: "numeric",
-            }
+            },
           )
         : "N/A",
       icon: LiaBirthdayCakeSolid,
@@ -72,7 +72,7 @@ const page = async (props: TPageProps) => {
       value: getSpecificLabel(
         filterData[0].options,
         data?.data?.candidateInfo?.experience,
-        "-"
+        "-",
       ),
       icon: GoStack,
     },
@@ -133,13 +133,13 @@ const page = async (props: TPageProps) => {
         <Container className="relative" mClassName="space-y-10 lg:space-y-16">
           <div
             className={cn(
-              "w-fit lg:w-full mx-auto flex flex-col lg:flex-row justify-between items-center gap-8 bg-white rounded-lg px-8 lg:px-10 py-6 shadow-sm"
+              "w-fit lg:w-full mx-auto flex flex-col lg:flex-row justify-between items-center gap-8 bg-white rounded-lg px-8 lg:px-10 py-6 shadow-sm",
             )}
           >
             <div className="flex flex-col lg:flex-row gap-3 items-center">
               <div className="flex-shrink-0 w-16 h-16 rounded overflow-hidden border border-gray-50 drop-shadow-sm">
                 <Image
-                  src={imageUrl + data?.data?.candidateInfo?.logo}
+                  src={data?.data?.candidateInfo?.logo}
                   alt="logo"
                   width={500}
                   height={500}
