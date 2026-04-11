@@ -75,7 +75,7 @@ const AdminEmployerDetails = ({
     id: string,
     isApprove: boolean,
     isCompleted: boolean,
-    values: TRejectResObj
+    values: TRejectResObj,
   ) => {
     console.log("Handle Deactive", id, values);
     try {
@@ -220,7 +220,7 @@ const AdminEmployerDetails = ({
         <div className="w-full h-[180px] z-0">
           <Image
             // src="/test/job-details-bg.svg"
-            src={imageUrl + employerDetails?.banner}
+            src={employerDetails?.banner}
             alt="background"
             width={1000}
             height={1000}
@@ -240,7 +240,7 @@ const AdminEmployerDetails = ({
               <div className="flex-shrink-0 w-20 rounded-full overflow-hidden border border-gray-50 drop-shadow-sm">
                 <Image
                   // src={"/test/employer.svg"}
-                  src={imageUrl + employerDetails?.logo}
+                  src={employerDetails?.logo}
                   alt="logo"
                   width={500}
                   height={500}
