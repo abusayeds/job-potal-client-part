@@ -111,7 +111,7 @@ const page = async (props: TPageProps) => {
         <Container className="relative" mClassName="">
           <div className="w-full h-[180px] z-0">
             <Image
-              src={imageUrl + data?.data?.banner}
+              src={data?.data?.banner}
               alt="background"
               width={1000}
               height={1000}
@@ -130,7 +130,7 @@ const page = async (props: TPageProps) => {
               <div className="flex flex-col lg:flex-row gap-3 justify-between items-center">
                 <div className="flex-shrink-0 w-20 h-20 rounded overflow-hidden border border-gray-50 drop-shadow-sm">
                   <Image
-                    src={imageUrl + data?.data?.logo}
+                    src={data?.data?.logo}
                     alt="logo"
                     width={500}
                     height={500}
@@ -189,7 +189,7 @@ const page = async (props: TPageProps) => {
                     {data.data?.benefits?.map(
                       (benefit: string, index: number) => (
                         <li key={index}>{benefit}</li>
-                      )
+                      ),
                     )}
                   </ul>
                 </div>
