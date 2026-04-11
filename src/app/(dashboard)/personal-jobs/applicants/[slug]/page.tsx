@@ -37,13 +37,13 @@ import BookmarkButton from "@/components/ui/BookmarkButton";
 const Page = () => {
   const { slug } = useParams();
   const { data, isLoading, isError } = useApplicationDetailsQuery(
-    slug as string
+    slug as string,
   );
   const personalInfo = [
     {
       label: "DATE OF BIRTH",
       value: new Date(
-        data?.data?.userId?.candidateInfo?.dateOfBrith
+        data?.data?.userId?.candidateInfo?.dateOfBrith,
       ).toLocaleString("en-US", {
         year: "numeric",
         month: "short",
@@ -71,14 +71,14 @@ const Page = () => {
       value: getSpecificLabel(
         filterData[0].options,
         data?.data?.userId?.candidateInfo?.experience,
-        "-"
+        "-",
       ),
       icon: GoStack,
     },
     {
       label: "EDUCATION",
       value: data?.data?.userId?.candidateInfo?.educations.map(
-        (item: string, i: number) => `${i !== 0 ? ", " : ""}` + item
+        (item: string, i: number) => `${i !== 0 ? ", " : ""}` + item,
       ),
       icon: PiGraduationCap,
     },
@@ -120,13 +120,13 @@ const Page = () => {
       <Container className="relative" mClassName="space-y-10 lg:space-y-16">
         <div
           className={cn(
-            "w-fit lg:w-full mx-auto flex flex-col lg:flex-row justify-between items-center gap-8 bg-white rounded-lg px-8 lg:px-10 py-6 shadow-sm"
+            "w-fit lg:w-full mx-auto flex flex-col lg:flex-row justify-between items-center gap-8 bg-white rounded-lg px-8 lg:px-10 py-6 shadow-sm",
           )}
         >
           <div className="flex flex-col lg:flex-row gap-3 items-center">
             <div className="flex-shrink-0 w-16 rounded-full overflow-hidden border border-gray-50 drop-shadow-sm">
               <Image
-                src={imageUrl + data?.data?.userId?.candidateInfo?.logo}
+                src={data?.data?.userId?.candidateInfo?.logo}
                 alt="logo"
                 width={500}
                 height={500}
@@ -162,7 +162,7 @@ const Page = () => {
         </div>
         <div
           className={cn(
-            "grid grid-cols-1 xl:grid-cols-10 gap-12 lg:gap-5 xl:gap-8 2xl:gap-16"
+            "grid grid-cols-1 xl:grid-cols-10 gap-12 lg:gap-5 xl:gap-8 2xl:gap-16",
           )}
         >
           <div className="col-span-1 xl:col-span-6 space-y-8 lg:pr-4 2xl:pr-8 divide-y divide-gray-300">
