@@ -87,7 +87,7 @@ const Employees = () => {
           <div className="flex flex-col lg:flex-row  items-center gap-3">
             <div className="flex-shrink-0 w-14 h-14 rounded-full overflow-hidden border border-gray-50 drop-shadow-xs">
               <Image
-                src={imageUrl + user?.logo}
+                src={user?.logo}
                 alt="logo"
                 width={500}
                 height={500}
@@ -222,7 +222,7 @@ const Employees = () => {
                       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])/;
                     if (!pattern.test(value)) {
                       return Promise.reject(
-                        "Include uppercase, lowercase, number, special character!"
+                        "Include uppercase, lowercase, number, special character!",
                       );
                     }
                     if (value.length < 12) {
@@ -250,7 +250,7 @@ const Employees = () => {
                       return Promise.resolve();
                     }
                     return Promise.reject(
-                      new Error("The password that you entered do not match!")
+                      new Error("The password that you entered do not match!"),
                     );
                   },
                 }),

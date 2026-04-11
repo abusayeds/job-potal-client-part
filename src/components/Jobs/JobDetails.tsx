@@ -84,7 +84,7 @@ const JobDetails = ({
     <div>
       <div className="w-full h-[180px] z-0">
         <Image
-          src={imageUrl + data.banner}
+          src={data.banner}
           alt="background"
           width={1000}
           height={1000}
@@ -104,13 +104,13 @@ const JobDetails = ({
             "w-full flex flex-col lg:flex-row justify-between items-center gap-8 bg-white rounded-lg px-6 py-6 z-10",
             {
               "lg:flex-col xl:flex-row gap-5": viewType === "dashboard",
-            }
+            },
           )}
         >
           <div className="flex flex-col lg:flex-row gap-3 items-center">
             <div className="flex-shrink-0 h-20 w-20 border rounded overflow-hidden border-gray-50 drop-shadow-sm">
               <Image
-                src={imageUrl + data.logo}
+                src={data.logo}
                 alt="logo"
                 width={500}
                 height={500}
@@ -138,7 +138,11 @@ const JobDetails = ({
           <div className="flex flex-col items-end justify-end gap-3">
             {viewType !== "dashboard" && (
               <div className="flex items-center gap-3">
-                <BookmarkButton dataId={data._id}  className="w-6 h-6" size="large" />
+                <BookmarkButton
+                  dataId={data._id}
+                  className="w-6 h-6"
+                  size="large"
+                />
                 <ApplyButton jobData={data} />
               </div>
             )}
@@ -161,7 +165,7 @@ const JobDetails = ({
           {
             "lg:grid-cols-1 2xl:grid-cols-9 lg:divide-x-0 lx:divide-x":
               viewType === "dashboard",
-          }
+          },
         )}
       >
         <div className="col-span-1 lg:col-span-5 space-y-8 lg:pr-4 2xl:pr-8">
@@ -230,7 +234,7 @@ const JobDetails = ({
             {
               " order-first lg:order-first xl:order-last":
                 viewType === "dashboard",
-            }
+            },
           )}
         >
           <div className="flex flex-col lg:flex-row justify-around items-center divide-y lg:divide-y-0 lg:divide-x divide-gray-200 py-5">

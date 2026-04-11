@@ -17,7 +17,7 @@ const EmployerCard = ({ employerData }: { employerData: TUser }) => {
       <div className="flex flex-col lg:flex-row lg:items-center gap-4">
         <div className="flex-shrink-0 w-20 xl:w-24 drop-shadow-xs">
           <Image
-            src={imageUrl + employerData.logo}
+            src={employerData.logo}
             alt="logo"
             width={500}
             height={500}
@@ -33,7 +33,7 @@ const EmployerCard = ({ employerData }: { employerData: TUser }) => {
           <p className="text-gray-600 font-medium">
             {getSpecificLabel(
               filterData[3].options,
-              employerData.industry as string
+              employerData.industry as string,
             ) ?? "N/A"}
           </p>
 

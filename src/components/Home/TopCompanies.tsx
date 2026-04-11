@@ -60,47 +60,41 @@ const TopCompanies = ({ data }: { data: TUniObject }) => {
         title="Top companies"
         className="text-center lg:text-start"
       />
-      <LoaderWraperComp
-        isLoading={false}
-        isError={!data.success}
-        error={data}
-      >
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-5 gap-y-3 lg:gap-y-10 mt-8 lg:mt-10">
-        {data?.data?.map((company: TUser & { openPositions: number }) => (
-          <div
-            key={company._id}
-            className="bg-white p-4 xl:p-6 rounded-xl drop-shadow-xs"
-          >
-            <div className="flex  items-center gap-3">
-              <div className="max-w-16">
-                <Image
-                  src={
-                    company.logo ? imageUrl + company.logo : "/demo-profile.jpg"
-                  }
-                  alt="logo"
-                  width={1000}
-                  height={1000}
-                  className="w-full "
-                />
-              </div>
-              <div className="space-y-1.5">
-                <h5 className="sm:text-lg text-brand font-semibold">
-                  {company.companyName || "N/A"}
-                </h5>
-                <div className="flex items-center gap-1 text-brand/50">
-                  <TfiLocationPin size={16} />
-                  <p className="text-sm sm:text-base line-clamp-1">
-                    {company.address || "N/A"}
-                  </p>
+      <LoaderWraperComp isLoading={false} isError={!data.success} error={data}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-5 gap-y-3 lg:gap-y-10 mt-8 lg:mt-10">
+          {data?.data?.map((company: TUser & { openPositions: number }) => (
+            <div
+              key={company._id}
+              className="bg-white p-4 xl:p-6 rounded-xl drop-shadow-xs"
+            >
+              <div className="flex  items-center gap-3">
+                <div className="max-w-16">
+                  <Image
+                    src={company.logo ? company.logo : "/demo-profile.jpg"}
+                    alt="logo"
+                    width={1000}
+                    height={1000}
+                    className="w-full "
+                  />
+                </div>
+                <div className="space-y-1.5">
+                  <h5 className="sm:text-lg text-brand font-semibold">
+                    {company.companyName || "N/A"}
+                  </h5>
+                  <div className="flex items-center gap-1 text-brand/50">
+                    <TfiLocationPin size={16} />
+                    <p className="text-sm sm:text-base line-clamp-1">
+                      {company.address || "N/A"}
+                    </p>
+                  </div>
                 </div>
               </div>
+              <p className="text-primary text-center font-semibold font-sans pt-6 pb-2">
+                Open Position ({company.openPositions})
+              </p>
             </div>
-            <p className="text-primary text-center font-semibold font-sans pt-6 pb-2">
-              Open Position ({company.openPositions})
-            </p>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
       </LoaderWraperComp>
     </Container>
   );

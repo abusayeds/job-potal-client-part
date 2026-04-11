@@ -20,7 +20,7 @@ const CompanyCard = ({ data }: { data: TUniObject }) => {
           <div className="flex-shrink-0 w-20 rounded-lg overflow-hidden border border-gray-50 drop-shadow-sm">
             <Image
               // src={"/test/employer.svg"}
-              src={imageUrl + data?.logo}
+              src={data?.logo}
               alt="logo"
               width={500}
               height={500}

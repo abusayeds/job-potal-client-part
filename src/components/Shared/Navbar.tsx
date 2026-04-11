@@ -63,7 +63,7 @@ const Navbar = ({ from }: { from?: string }) => {
         "sticky top-0 left-0 z-40 -translate-y-0 transition-all duration-400",
         {
           "lg:-translate-y-14": scrollDifference > 0,
-        }
+        },
       )}
     >
       {/* Desktop Navbar */}
@@ -77,7 +77,7 @@ const Navbar = ({ from }: { from?: string }) => {
                   !(
                     item.path === "job-seekers" &&
                     !["employee", "employer"].includes(user?.role as string)
-                  )
+                  ),
               )
               .map((item, index) => (
                 <Link href={`/${item.path}`} key={item.path}>
@@ -88,7 +88,7 @@ const Navbar = ({ from }: { from?: string }) => {
                         "text-[#000000] transition-all relative before:absolute before:left-0 before:bottom-0 before:w-full before:h-0.5 before:bg-primary":
                           (currentPath === "/" && index === 0) ||
                           !!currentPath.split("/").includes(item.path),
-                      }
+                      },
                     )}
                   >
                     {item.name}
@@ -103,7 +103,7 @@ const Navbar = ({ from }: { from?: string }) => {
                     {
                       "text-[#000000] transition-all relative before:absolute before:left-0 before:bottom-0 before:w-full before:h-0.5 before:bg-primary":
                         from === "dashboard",
-                    }
+                    },
                   )}
                 >
                   Dashboard
@@ -118,7 +118,7 @@ const Navbar = ({ from }: { from?: string }) => {
                 {
                   "text-brand transition-all relative before:absolute before:left-0 before:bottom-0 before:w-full before:h-0.5 before:bg-primary":
                     currentPath === "/contact",
-                }
+                },
               )}
             >
               <p className="flex items-center gap-2">
@@ -179,9 +179,7 @@ const Navbar = ({ from }: { from?: string }) => {
                     }
                   >
                     <Image
-                      src={
-                        user.logo ? imageUrl + user.logo : "/demo-profile.jpg"
-                      }
+                      src={user.logo ? user.logo : "/demo-profile.jpg"}
                       alt="profile"
                       fill
                       style={{ objectFit: "cover" }}

@@ -57,14 +57,14 @@ export const DashboardTrainings = ({
             key={training._id}
             className={cn(
               "grid grid-cols-11 xl:grid-cols-12 gap-3 md:gap-2.5 2xl:gap-4 items-center bg-white hover:drop-shadow-lg px-4 py-6 md:py-4 hover:rounded-xl border-t border-t-gray-200 hover:ring-1 ring-primary group",
-              { "border-t-0": index === 0 }
+              { "border-t-0": index === 0 },
             )}
           >
             <div className="col-span-11 md:col-span-5 xl:col-span-6 flex flex-col md:flex-row gap-2.5 sm:gap-3 items-center">
               {/* {viewType === "candidate" && (
                 <div className="flex-shrink-0 w-20 md:w-16 drop-shadow-xs">
                   <Image
-                    src={imageUrl + job.logo}
+                    src={ job.logo}
                     alt="logo"
                     width={500}
                     height={500}
@@ -98,7 +98,7 @@ export const DashboardTrainings = ({
               <span className="md:hidden">Date:</span>
               <span>
                 {new Date(
-                  viewType === "candidate" ? training.regiDate : training.date
+                  viewType === "candidate" ? training.regiDate : training.date,
                 ).toLocaleString("en-US", {
                   year: "numeric",
                   month: "short",
@@ -108,7 +108,7 @@ export const DashboardTrainings = ({
             </p>
             <div
               className={cn(
-                "col-span-11 md:col-span-1 flex justify-center items-center gap-1 text-sm text-brand/70"
+                "col-span-11 md:col-span-1 flex justify-center items-center gap-1 text-sm text-brand/70",
               )}
             >
               <span className="md:hidden">Format:</span>

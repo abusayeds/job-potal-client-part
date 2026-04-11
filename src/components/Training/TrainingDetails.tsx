@@ -18,12 +18,7 @@ const TrainingDetails = ({ data }: { data: TTraining }) => {
     <div className="grid grid-cols-12 gap-y-10 lg:gap-y-0 lg:gap-x-10 2xl:gap-x-16 py-6 lg:py-8 xl:py-10 w-full">
       <div className="col-span-12 lg:col-span-8">
         <div>
-          <Image
-            src={imageUrl + data?.image}
-            alt="Training"
-            width={1000}
-            height={1000}
-          />
+          <Image src={data?.image} alt="Training" width={1000} height={1000} />
         </div>
         <div className="mt-6 lg:mt-10 max-w-2xl 2xl:max-w-3xl mx-auto space-y-1.5">
           <h4 className="text-xl md:text-2xl lg:text-4xl font-semibold leading-normal pb-2">
@@ -31,7 +26,10 @@ const TrainingDetails = ({ data }: { data: TTraining }) => {
           </h4>
           <div className="">
             <span className="font-semibold">Format: </span>
-            <span className="text-gray-600">{getSpecificLabel(trainingFilter[1].options, data.format) ?? "N/A"}</span>
+            <span className="text-gray-600">
+              {getSpecificLabel(trainingFilter[1].options, data.format) ??
+                "N/A"}
+            </span>
           </div>
           <div className="">
             <span className="font-semibold">Date: </span>
@@ -55,7 +53,10 @@ const TrainingDetails = ({ data }: { data: TTraining }) => {
           </div> */}
         </div>
         <div className="shadow-2xl w-full h-[1px] bg-gray-200 my-6 lg:my-10" />
-        <div  className="no-tailwind" dangerouslySetInnerHTML={{ __html: data.description }}></div>
+        <div
+          className="no-tailwind"
+          dangerouslySetInnerHTML={{ __html: data.description }}
+        ></div>
         <div className="pt-5">
           <span className="text-lg whitespace-pre border-b border-gray-300 pb-1">
             Share this:
@@ -144,7 +145,7 @@ const TrainingDetails = ({ data }: { data: TTraining }) => {
           <div className="pb-4">
             <div className="flex-shrink-0 h-20 w-20 rounded-full overflow-hidden border border-gray-50 drop-shadow-sm mx-auto mb-2.5">
               <Image
-                src={imageUrl + data.employeId?.logo}
+                src={data.employeId?.logo}
                 alt="logo"
                 width={500}
                 height={500}

@@ -22,7 +22,7 @@ const RelatedJobCard = ({ data }: { data: TJobDetails }) => {
         <div className="flex items-center gap-3 mb-4">
           <div className="w-12 h-12 rounded-md overflow-hidden drop-shadow-xs flex-shrink-0 border border-gray-100">
             <Image
-              src={imageUrl + data.logo}
+              src={data.logo}
               alt="logo"
               width={500}
               height={500}
@@ -53,7 +53,7 @@ const RelatedJobCard = ({ data }: { data: TJobDetails }) => {
                     ? "text-green-500 border-green-500"
                     : "text-red-500 border-red-500"
                 }`,
-              }
+              },
             )}{" "}
             {new Date(data.expirationDate).toLocaleString("en-US", {
               year: "numeric",

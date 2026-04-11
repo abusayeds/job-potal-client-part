@@ -15,7 +15,7 @@ const TrainingCard = ({ data }: { data: TTraining }) => {
       <div className="grid grid-cols-12 border border-gray-200 lg:divide-x divide-gray-200">
         <div className="col-span-12 lg:col-span-3 w-full h-full p-0.5">
           <Image
-            src={imageUrl + data?.image}
+            src={data?.image}
             alt="Training"
             width={1000}
             height={1000}
@@ -27,7 +27,10 @@ const TrainingCard = ({ data }: { data: TTraining }) => {
             {data?.title ?? "N/A"}
           </h3>
           <div className="line-clamp-3">
-            <div  className="no-tailwind" dangerouslySetInnerHTML={{ __html: data.description }}></div>
+            <div
+              className="no-tailwind"
+              dangerouslySetInnerHTML={{ __html: data.description }}
+            ></div>
           </div>
           {/* <p className="text-gray-600 line-clamp-4">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam

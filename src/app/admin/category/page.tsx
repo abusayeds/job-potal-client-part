@@ -58,9 +58,7 @@ const Page = () => {
     {
       title: "",
       dataIndex: "logo",
-      render: (text) => (
-        <Image width={50} src={imageUrl + text} alt="category_image" />
-      ),
+      render: (text) => <Image width={50} src={text} alt="category_image" />,
       align: "end",
     },
     {

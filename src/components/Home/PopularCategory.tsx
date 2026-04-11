@@ -22,11 +22,7 @@ const PopularCategory = ({ data }: { data: TUniObject }) => {
         className="text-center lg:text-left"
       />
 
-      <LoaderWraperComp
-        isLoading={false}
-        isError={!data.success}
-        error={data}
-      >
+      <LoaderWraperComp isLoading={false} isError={!data.success} error={data}>
         <div className="grid grid-cols-2 xl:grid-cols-4 gap-x-2 gap-y-3 lg:gap-y-10 mt-8 lg:mt-10">
           {data?.data?.map((category: TJobCategory, index: number) => (
             <motion.div
@@ -45,19 +41,18 @@ const PopularCategory = ({ data }: { data: TUniObject }) => {
             >
               <div className="text-primary bg-primary/20 p-3 sm:p-4 rounded-lg max-w-52">
                 <Image
-                  src={imageUrl + category.logo}
+                  src={category.logo}
                   alt="Logo"
                   height={100}
                   width={100}
                   // fill
                   // style={{ objectFit: "cover" }}
-              className="h-6 w-6 sm:h-7 sm:w-7 object-cover"
+                  className="h-6 w-6 sm:h-7 sm:w-7 object-cover"
                 />
-                
               </div>
               {/* <div className="relative w-full h-full rounded-lg max-w-24 aspect-[4/1]">
                 <Image
-                  src={imageUrl + category.logo}
+                  src={ category.logo}
                   alt="Logo"
                   fill
                   style={{ objectFit: "cover" }}

@@ -57,18 +57,13 @@ export const DashboardJobs = ({
             key={job._id}
             className={cn(
               "grid grid-cols-11 xl:grid-cols-12 gap-3 md:gap-2.5 2xl:gap-4 items-center bg-white hover:drop-shadow-lg px-4 py-6 md:py-4 hover:rounded-xl border-t border-t-gray-200 hover:ring-1 ring-primary group",
-              { "border-t-0": index === 0 }
+              { "border-t-0": index === 0 },
             )}
           >
             <div className="col-span-11 md:col-span-5 xl:col-span-6 flex flex-col md:flex-row gap-2.5 sm:gap-3 items-center">
               {viewType === "candidate" && (
                 <div className="flex-shrink-0 w-20 md:w-16 drop-shadow-xs">
-                  <Image
-                    src={imageUrl + job.logo}
-                    alt="logo"
-                    width={500}
-                    height={500}
-                  />
+                  <Image src={job.logo} alt="logo" width={500} height={500} />
                 </div>
               )}
               <div className="space-y-1 xl:space-y-2">
@@ -92,8 +87,8 @@ export const DashboardJobs = ({
                       {viewType === "candidate"
                         ? `${currencyIcon[job.currency]}
                                         ${job.minSalary}-${job.maxSalary}/${
-                            job.salaryType
-                          }`
+                                          job.salaryType
+                                        }`
                         : isExpired(job.expirationDate) || job.expirationDate}
                     </p>
                   </div>
@@ -115,14 +110,14 @@ export const DashboardJobs = ({
                 "col-span-11 md:col-span-1 flex justify-center items-center gap-1 text-sm text-brand/70",
                 {
                   "text-green-400": !isExpired(job.expirationDate),
-                }
+                },
               )}
             >
               {createElement(
                 !isExpired(job.expirationDate) ? GoCheck : CgClose,
                 {
                   className: "h-3 w-3 border rounded-full shrink-0",
-                }
+                },
               )}
               {!isExpired(job.expirationDate) ? "Active" : "Expire"}
             </div>

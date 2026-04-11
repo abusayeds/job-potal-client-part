@@ -30,7 +30,7 @@ const SeekerCard = ({
       key={seeker._id}
       className={cn(
         "flex flex-col md:flex-row justify-between items-center gap-5 md:gap-2.5 2xl:gap-4 bg-white hover:drop-shadow-lg px-4 py-6 md:py-4 group relative",
-        className
+        className,
       )}
     >
       <div className="flex flex-col md:flex-row gap-3 items-center">
@@ -40,7 +40,7 @@ const SeekerCard = ({
           })}
         >
           <Image
-            src={imageUrl + seeker.logo}
+            src={seeker.logo}
             alt="logo"
             width={500}
             height={500}
@@ -66,7 +66,7 @@ const SeekerCard = ({
                   {getSpecificLabel(
                     filterData[0].options,
                     seeker?.experience as string,
-                    "-"
+                    "-",
                   )}{" "}
                   experience
                 </p>

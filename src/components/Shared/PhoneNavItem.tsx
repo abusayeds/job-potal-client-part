@@ -67,7 +67,7 @@ const PhoneNavItem = ({
               !(
                 item.path === "job-seekers" &&
                 !["employee", "employer"].includes(user?.role as string)
-              )
+              ),
           )
           .map((item, index) => (
             <Link href={`/${item.path}`} key={item.path}>
@@ -78,7 +78,7 @@ const PhoneNavItem = ({
                     "text-[#000000] transition-all relative before:absolute before:left-0 before:bottom-0 before:w-full before:h-0.5 before:bg-primary pb-3":
                       (currentPath === "/" && index === 0) ||
                       !!currentPath.split("/").includes(item.path),
-                  }
+                  },
                 )}
               >
                 {item.name}
@@ -93,7 +93,7 @@ const PhoneNavItem = ({
                 {
                   "text-[#000000] transition-all relative before:absolute before:left-0 before:bottom-0 before:w-full before:h-0.5 before:bg-primary pb-3":
                     from === "dashboard",
-                }
+                },
               )}
             >
               Dashboard
@@ -107,7 +107,7 @@ const PhoneNavItem = ({
               {
                 "text-brand transition-all relative before:absolute before:left-0 before:bottom-0 before:w-full before:h-0.5 before:bg-primary":
                   currentPath === "/contact",
-              }
+              },
             )}
           >
             <p className="flex items-center gap-2">
@@ -143,7 +143,7 @@ const PhoneNavItem = ({
               }
             >
               <Image
-                src={user?.logo ? imageUrl + user.logo : "/demo-profile.jpg"}
+                src={user?.logo ? user.logo : "/demo-profile.jpg"}
                 alt="profile"
                 fill
                 style={{ objectFit: "cover" }}
