@@ -23,6 +23,7 @@
     "i18n-nationality": "^1.4.0",
     "jose": "^6.0.12",
     "js-cookie": "^3.0.5",
+    "lucide-react": "^1.8.0",
     "motion": "^12.12.1",
     "next": "^16.2.3",
     "nextjs-toploader": "^3.8.16",
