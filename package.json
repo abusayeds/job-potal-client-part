@@ -13,6 +13,7 @@
   "dependencies": {
     "@ant-design/nextjs-registry": "^1.0.2",
     "@ant-design/v5-patch-for-react-19": "^1.0.3",
+    "@netlify/plugin-nextjs": "^5.15.9",
     "@react-pdf/renderer": "^4.3.0",
     "@reduxjs/toolkit": "^2.8.2",
     "@tinymce/tinymce-react": "^6.1.0",
@@ -23,7 +24,7 @@
     "jose": "^6.0.12",
     "js-cookie": "^3.0.5",
     "motion": "^12.12.1",
-    "next": "15.3.2",
+    "next": "^16.2.3",
     "nextjs-toploader": "^3.8.16",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",

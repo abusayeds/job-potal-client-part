@@ -37,7 +37,7 @@ const ResetPass = () => {
   return (
     <div
       className={cn(
-        "w-full h-full min-h-[calc(100vh-300px)] flex flex-col justify-center items-center gap-4 max-w-xl mx-auto mt-10"
+        "w-full h-full min-h-[calc(100vh-300px)] flex flex-col justify-center items-center gap-4 max-w-xl mx-auto mt-10",
       )}
     >
       {contextHolder}
@@ -70,16 +70,7 @@ const ResetPass = () => {
                 if (!value) {
                   return Promise.reject("Password is required!");
                 }
-                const pattern =
-                  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])/;
-                if (!pattern.test(value)) {
-                  return Promise.reject(
-                    "Include uppercase, lowercase, number, special character!"
-                  );
-                }
-                if (value.length < 12) {
-                  return Promise.reject("Must be at least 12 characters!");
-                }
+
                 return Promise.resolve();
               },
             },
@@ -102,7 +93,7 @@ const ResetPass = () => {
                   return Promise.resolve();
                 }
                 return Promise.reject(
-                  new Error("The password that you entered do not match!")
+                  new Error("The password that you entered do not match!"),
                 );
               },
             }),

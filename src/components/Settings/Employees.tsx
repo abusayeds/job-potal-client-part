@@ -87,7 +87,7 @@ const Employees = () => {
           <div className="flex flex-col lg:flex-row  items-center gap-3">
             <div className="flex-shrink-0 w-14 h-14 rounded-full overflow-hidden border border-gray-50 drop-shadow-xs">
               <Image
-                src={user?.logo}
+                src={user?.logo as any}
                 alt="logo"
                 width={500}
                 height={500}
@@ -218,16 +218,7 @@ const Employees = () => {
                     if (!value) {
                       return Promise.reject("Password is required!");
                     }
-                    const pattern =
-                      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])/;
-                    if (!pattern.test(value)) {
-                      return Promise.reject(
-                        "Include uppercase, lowercase, number, special character!",
-                      );
-                    }
-                    if (value.length < 12) {
-                      return Promise.reject("Must be at least 12 characters!");
-                    }
+
                     return Promise.resolve();
                   },
                 },

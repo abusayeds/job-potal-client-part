@@ -50,7 +50,7 @@ const SignIn = ({
           token: response.data.token,
           user: response.data.user,
           remember: !!values.remember,
-        })
+        }),
       );
       if (!!redirect) {
         router.replace(redirect);
@@ -67,7 +67,7 @@ const SignIn = ({
     <div
       className={cn(
         "w-full flex flex-col justify-center items-start max-w-xl mx-auto lg:mx-0",
-        className
+        className,
       )}
     >
       {contextHolder}
@@ -129,10 +129,6 @@ const SignIn = ({
               {
                 required: true,
                 message: "Password is required!",
-              },
-              {
-                min: 12,
-                message: "Password must be at least 12 characters long!",
               },
             ]}
             hasFeedback
