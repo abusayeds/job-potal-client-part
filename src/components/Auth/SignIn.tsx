@@ -367,7 +367,7 @@ const SignIn = ({
                 href={"/forget-pass"}
                 className="hover:text-primary! text-secondery! mt-1"
               >
-                Forget password
+                Forget password.
               </Link>
             )}
           </div>
@@ -406,7 +406,7 @@ const SignIn = ({
             <span className="font-medium">{selectedDemoEmail}</span>
           </p>
           <p>
-            <span className="text-gray-400">Password :</span>{" "}
+            <span className="text-gray-400">Password. :</span>{" "}
             <span className="font-medium tracking-widest">••••••••</span>
           </p>
         </div>
