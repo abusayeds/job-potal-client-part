@@ -367,7 +367,7 @@ const SignIn = ({
                 href={"/forget-pass"}
                 className="hover:text-primary! text-secondery! mt-1"
               >
-                Forget password.
+                Forget password
               </Link>
             )}
           </div>
