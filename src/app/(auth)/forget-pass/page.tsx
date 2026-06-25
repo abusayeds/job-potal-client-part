@@ -7,6 +7,7 @@ import { appStatus } from "@/services";
 
 const page = async () => {
   const appStatusData = await appStatus();
+  
   return (
     <div className="relative ">
       <div className="min-h-screen h-full grid grid-cols-2 lg:sticky top-0 left-0">
